@@ -1,14 +1,18 @@
+import { useEffect } from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../store/ducks/user/actions";
+
 const Stories = () => {
+  const user = useSelector((state: any) => state).usuario;
+
   return (
     <div>
       <div className="user-info">
-        <img
-          alt="Perfil"
-          src="https://randomuser.me/api/portraits/women/25.jpg"
-        />
+        <img alt="Perfil" src={user.userPicture} />
         <div className="user-bio">
-          <strong>Jeniffer</strong>
-          <span>jenicarvalho</span>
+          <strong>{user.name}</strong>
+          <span>{user.username}</span>
         </div>
       </div>
       <div className="stories">

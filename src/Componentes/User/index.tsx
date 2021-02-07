@@ -13,7 +13,7 @@ const Usuario = () => {
     axios
       .get("http://localhost:4000/user")
       .then((resposta) => dispatch(getUser(resposta.data)));
-  });
+  }, []);
 
   return (
     <div className="header">

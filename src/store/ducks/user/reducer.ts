@@ -9,10 +9,12 @@ const initialStateUser: User = {
 function reducerUser(state = initialStateUser, action: any) {
   switch (action.type) {
     case UserTypes.GET_USER:
-      console.log(action.payload);
+      
       return {
         ...state,
         name: action.payload.name,
+        username: action.payload.username,
+        userPicture: action.payload.userPicture
       };
 
     default:
