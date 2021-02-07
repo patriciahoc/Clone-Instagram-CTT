@@ -1,10 +1,20 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "../../store/ducks/user/actions";
+import { getStories } from "../../store/ducks/stories/actions";
+import {Story} from "../../store/ducks/stories/types"
 
 const Stories = () => {
-  const user = useSelector((state: any) => state).usuario;
+  const user = useSelector((state: any) => state.usuario);
+  const stories = useSelector((state: any) => state.stories);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/stories")
+      .then((resposta) => dispatch(getStories(resposta.data)));
+  }, []);
 
   return (
     <div>
@@ -15,33 +25,21 @@ const Stories = () => {
           <span>{user.username}</span>
         </div>
       </div>
+
       <div className="stories">
         <h2>Stories</h2>
 
-        <div className="storie">
-          <div className="storie-image">
-            <img
-              src="https://randomuser.me/api/portraits/men/11.jpg"
-              alt="user"
-            />
+        {stories.map((story: Story) => (
+          <div key={story.id} className="storie">
+            <div className="storie-image">
+              <img src={story.userPicture} alt="user" />
+            </div>
+            <div className="storie-user">
+              <strong>{story.user}</strong>
+              <span>{story.time}</span>
+            </div>
           </div>
-          <div className="storie-user">
-            <strong>history</strong>
-            <span>há 2 horas</span>
-          </div>
-        </div>
-        <div className="storie">
-          <div className="storie-image">
-            <img
-              src="https://randomuser.me/api/portraits/men/11.jpg"
-              alt="user"
-            />
-          </div>
-          <div className="storie-user">
-            <strong>history</strong>
-            <span>há 2 horas</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

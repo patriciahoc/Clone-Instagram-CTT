@@ -1,30 +1,46 @@
 {
   "posts": [
     {
-      "id": 2,
+      "id": 1,
       "user": "history",
       "userPicture": "https://randomuser.me/api/portraits/men/22.jpg",
       "postPicture": "https://historycouk.s3.eu-west-2.amazonaws.com/s3fs-public/styles/860x300/public/2020-07/orson-welles-war-worlds.jpg",
       "description": "On #ThisDayinHistory 1938, Orson Welles caused a nationwide panic with his broadcast of “War of the Worlds”—a realistic radio dramatization of a Martian invasion of Earth",
-      "likes": 210
+      "likes": 233
     },
     {
-      "id": 3,
+      "id": 2,
       "user": "nasa",
       "userPicture": "https://randomuser.me/api/portraits/women/17.jpg",
       "postPicture": "https://blogs.esa.int/iriss/files/2015/09/20457019454_7de78eff73_o.jpg",
       "location": "Space",
       "description": "Waving goodbye to a spacecraft.",
-      "likes": 20
+      "likes": 21
     },
     {
-      "id": 4,
+      "id": 3,
       "user": "nasa",
       "userPicture": "https://randomuser.me/api/portraits/women/27.jpg",
       "postPicture": "https://www.publicdomainpictures.net/pictures/90000/velka/mars.jpg",
       "location": "Mars",
       "description": "🧭 Explorer, 📸 photographer, ⛰️ geologist, 🧪 chemist... Mars Curiosity does it all!⁣",
-      "likes": 9
+      "likes": 10
+    },
+    {
+      "user": "jenicarvalho",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 2,
+      "id": 4,
+      "postPicture": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29yYWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "coral"
+    },
+    {
+      "user": "jenicarvalho",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 2,
+      "id": 5,
+      "postPicture": "https://images.unsplash.com/photo-1552486282-f238c98e2a27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZmxvcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "description": "flor"
     }
   ],
   "stories": [

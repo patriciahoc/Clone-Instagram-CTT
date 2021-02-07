@@ -1,8 +1,7 @@
-export interface Stories {
-  stories: StoriesTypes[];
+export enum StoriesTypes {
+  GET_STORIES = "@GET_STORIES",
 }
-
-export interface StoriesTypes {
+export interface Story {
   id: number;
   user: string;
   userPicture: string;
